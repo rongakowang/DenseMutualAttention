@@ -5,7 +5,7 @@
     </h1>
 
   <p align="center">
-    <img src="image/main.png"" alt="Overview" width="75%">
+    <img src="assets/main.png"" alt="Overview" width="75%">
   </p>
   <p align="center">
     <strong>WACV, 2023</strong>
@@ -31,6 +31,11 @@
 </p>
 
 <br />
+
+## TODO
+
+- [ ] installation environment
+- [ ] upload pretrained models
 
 ## Installation
 
