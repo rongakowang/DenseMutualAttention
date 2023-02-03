@@ -32,26 +32,44 @@
 
 <br />
 
-## TODO
-
-- [ ] installation environment
-- [x] upload pretrained models
-
 ## Installation
 
 ### Environment
 
-Create a new venv from conda using the below command:
-
-```
-conda env create -f environment.yml
-```
-
-For the rest sections, we assume the `ROOT_DIR` is at `dense_mutual_attention`. Note you need to clone recursively to include `@dex-ycb-toolkit`:
+Retrive the repo first, for the rest sections, we assume the `ROOT_DIR` is at `DenseMutualAttention`:
 
 ```
 git clone --recursive https://github.com/rongakowang/DenseMutualAttention.git
 ```
+
+Create a conda venv and install `pytorch`:
+
+```
+conda env create -n DMA python=3.8
+conda activate DMA
+conda install pytorch==1.7.0 torchvision==0.8.0 torchaudio==0.7.0 cudatoolkit=11.0 -c pytorch
+```
+
+Install base dependencies:
+
+```
+pip install -r requirements.txt
+```
+
+Install `torch-sparse` and `torch-scatter` seperately, as they need to strictly match the CUDA version:
+
+```
+pip install torch-sparse==0.6.8 torch-scatter=2.0.5 -f https://data.pyg.org/whl/torch-1.7.0+cu110.html
+```
+
+Install `dex-ycb-toolkit`:
+
+```
+cd cd data/DexYCB/dex-ycb-toolkit
+pip install -e .
+```
+
+The above commands are tested in `Ubuntu 20.04`.
 
 ### Datasets
 
