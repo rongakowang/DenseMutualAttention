@@ -1,4 +1,5 @@
 import argparse
+import os
 import time
 import warnings
 
@@ -129,6 +130,7 @@ def main():
         print("CP (%):", (sum(contacts) / len(contacts)) * 100)
         print("Avg FPS:", (sum(avg_fps) / len(avg_fps)))
 
+        os.makedirs('../ho3d_preds/', exist_ok=True)
         dump(f'../ho3d_preds/pred.json', all_joints, all_hands)
 
 if __name__ == "__main__":
