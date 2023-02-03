@@ -34,10 +34,76 @@
 
 ## Installation
 
+### Environment
+
+Create a new venv from conda using the below command:
+
+```
+conda env create -f environment.yml
+```
+
+For the rest sections, we assume the `ROOT_DIR` is at `dense_mutual_attention`.
+
+### Datasets
+
+Download HO3D [**v2**](https://arxiv.org/abs/1907.01481.pdf) from the [official site](https://github.com/shreyashampali/ho3d) and [DexYCB](https://arxiv.org/abs/2104.04631) dataset from the [official site](https://dex-ycb.github.io). Then unzip the datasets to `./local_data` and rename them as `ho3d` and `dex-ycb` respectively.  
+
+Download the [MANO](https://mano.is.tue.mpg.de/download.php) hand model and extract the `pkl` files under `./local_data/mano`.
+
+Finally, we use simplified mesh data for the YCB objects, we have provided them in `local_data/ho3d_simple` and `local_data/dex_simple`. To evaluate on the DexYCB dataset, you need to download the [meta]() data for pre-processing and extract it under `local_data/dex-ycb`.
+
+The `./local_data` folder should have structure like:
+
+```
+    ├── ho3d
+    │   ├── evaluation
+    │   ├── evaluation.txt
+    │   ├── train
+    │   └── train.txt
+    ├── dex-ycb
+    │   ├── 20200709-subject-01
+    │   ├── 20200813-subject-02
+    │   ├── 20200820-subject-03
+    │   ├── 20200903-subject-04
+    │   ├── 20200908-subject-05
+    │   ├── 20200918-subject-06
+    │   ├── 20200928-subject-07
+    │   ├── 20201002-subject-08
+    │   ├── 20201015-subject-09
+    │   ├── 20201022-subject-10
+    │   ├── bop
+    │   ├── calibration
+    │   └── models
+    │   └── meta
+    ├── mano
+    │   ├── MANO_LEFT.pkl
+    │   ├── MANO_RIGHT.pkl
+    ├── ho3d_simple
+    ├── dex_simple
+```
+
 ## Evaluation
 
-## Acknowledge & Citation
+### HO3Dv2
 
+Download the pretrained [model]() and run the below command to obtain the result in Table 1 in the paper, note that the FPS may vary on devices.
+
+```sh
+cd main
+python test.py --gpu 0 --model_path '../pretrained_weights/snapshot_ho3d.pth.tar'
+```
+
+### DexYCB
+
+Download the pretrained [model]() and run the below command to obtain the result in Table 2 in the paper.
+```sh
+cd main
+python test_dexycb.py --gpu 0 --model_path '../pretrained_weights/snapshot_dexycb.pth.tar'
+```
+
+## Citation
+
+If you use the code for your research, please cite with the below:
 ```
 @InProceedings{Wang_2023_WACV,
     author    = {Wang, Rong and Mao, Wei and Li, Hongdong},
@@ -48,3 +114,7 @@
     pages     = {5735-5745}
 }
 ```
+
+## Acknowledge
+
+The codebase is adopted from the repo [handAR](https://github.com/wbstx/handAR) and [homan](https://github.com/hassony2/homan), please also check out and cite them if you find them useful.
