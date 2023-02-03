@@ -123,6 +123,12 @@ cd main
 python test.py --gpu 0 --model_path '../pretrained_weights/snapshot_ho3d.pth.tar'
 ```
 
+For the hand metrics, you need to submit the `ho3d_preds/pred.zip` to the HO3D v2 CodaLab Challenge. The detailed results can be found in [here](https://codalab.lisn.upsaclay.fr/my/competition/submission/171674/detailed_results/) for the user `ako123`:
+
+  <p align="center">
+    <img src="assets/ho3d.png"" alt="HO3D results" width="75%">
+  </p>
+
 ### DexYCB
 
 Download the pretrained [model](https://drive.google.com/file/d/1Uyu_RDjIjvc3SjsqaTowSnP2__aXYwTb/view?usp=share_link) and run the below command to obtain the result in Table 2 in the paper.
