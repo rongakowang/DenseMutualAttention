@@ -35,7 +35,7 @@
 ## TODO
 
 - [ ] installation environment
-- [ ] upload pretrained models
+- [x] upload pretrained models
 
 ## Installation
 
@@ -59,7 +59,7 @@ Download HO3D [**v2**](https://arxiv.org/abs/1907.01481.pdf) from the [official 
 
 Download the [MANO](https://mano.is.tue.mpg.de/download.php) hand model and extract the `pkl` files under `./local_data/mano`.
 
-Finally, download the [additional data]() and extract them under `local_data`. The data contains:
+Finally, download the [additional data](https://drive.google.com/drive/folders/1dTtIcxdg468jmv-MrsDZbNmlOoANoqBS?usp=share_link) and extract them under `local_data`. The data contains:
 
 - Simplified mesh data for the YCB objects, under `local_data/ho3d_simple` and `local_data/dex_simple`.
 - Preprocessing meta data for the DexYCB dataset, under `local_data/dex-ycb/meta`.
@@ -98,7 +98,7 @@ The `./local_data` folder should have structure like:
 
 ### HO3Dv2
 
-Download the pretrained [model]() and run the below command to obtain the result in Table 1 in the paper, note that the FPS may vary on devices.
+Download the pretrained [model](https://drive.google.com/file/d/1THFHRjAGDbOs4dcsM7khScL7lwpw6Uf8/view?usp=share_link) and run the below command to obtain the result in Table 1 in the paper, note that the FPS may vary on devices.
 
 ```sh
 cd main
@@ -107,7 +107,7 @@ python test.py --gpu 0 --model_path '../pretrained_weights/snapshot_ho3d.pth.tar
 
 ### DexYCB
 
-Download the pretrained [model]() and run the below command to obtain the result in Table 2 in the paper.
+Download the pretrained [model](https://drive.google.com/file/d/1Uyu_RDjIjvc3SjsqaTowSnP2__aXYwTb/view?usp=share_link) and run the below command to obtain the result in Table 2 in the paper.
 ```sh
 cd main
 python test_dexycb.py --gpu 0 --model_path '../pretrained_weights/snapshot_dexycb.pth.tar'
