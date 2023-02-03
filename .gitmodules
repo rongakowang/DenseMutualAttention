@@ -1,0 +1,3 @@
+[submodule "data/DexYCB/dex-ycb-toolkit"]
+	path = data/DexYCB/dex-ycb-toolkit
+	url = https://github.com/NVlabs/dex-ycb-toolkit.git
