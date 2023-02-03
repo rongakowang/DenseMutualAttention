@@ -42,7 +42,11 @@ Create a new venv from conda using the below command:
 conda env create -f environment.yml
 ```
 
-For the rest sections, we assume the `ROOT_DIR` is at `dense_mutual_attention`.
+For the rest sections, we assume the `ROOT_DIR` is at `dense_mutual_attention`. Note you need to clone recursively to include `@dex-ycb-toolkit`:
+
+```
+git clone --recursive https://github.com/rongakowang/DenseMutualAttention.git
+```
 
 ### Datasets
 
@@ -50,7 +54,10 @@ Download HO3D [**v2**](https://arxiv.org/abs/1907.01481.pdf) from the [official 
 
 Download the [MANO](https://mano.is.tue.mpg.de/download.php) hand model and extract the `pkl` files under `./local_data/mano`.
 
-Finally, we use simplified mesh data for the YCB objects, we have provided them in `local_data/ho3d_simple` and `local_data/dex_simple`. To evaluate on the DexYCB dataset, you need to download the [meta]() data for pre-processing and extract it under `local_data/dex-ycb`.
+Finally, download the [additional data]() and extract them under `local_data`. The data contains:
+
+- Simplified mesh data for the YCB objects, under `local_data/ho3d_simple` and `local_data/dex_simple`.
+- Preprocessing meta data for the DexYCB dataset, under `local_data/dex-ycb/meta`.
 
 The `./local_data` folder should have structure like:
 
