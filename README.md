@@ -116,7 +116,7 @@ The `./local_data` folder should have structure like:
 
 ### HO3Dv2
 
-Download the pretrained [model](https://drive.google.com/file/d/1THFHRjAGDbOs4dcsM7khScL7lwpw6Uf8/view?usp=share_link) and run the below command to obtain the result in Table 1 in the paper, note that the FPS may vary on devices.
+Download the pretrained [model](https://drive.google.com/file/d/1usP5waQ6sLyPwEBi2jGj6NuyVRsZ_ib_/view?usp=drive_link) and run the below command to obtain the result in Table 1 in the paper, note that the FPS may vary on devices.
 
 ```sh
 cd main
@@ -131,7 +131,7 @@ For the hand metrics, you need to submit the `ho3d_preds/pred.zip` to the HO3D v
 
 ### DexYCB
 
-Download the pretrained [model](https://drive.google.com/file/d/1Uyu_RDjIjvc3SjsqaTowSnP2__aXYwTb/view?usp=share_link) and run the below command to obtain the result in Table 2 in the paper.
+Download the pretrained [model](https://drive.google.com/file/d/1fvMM1t87u4AfD9CNxbn9_PcSR7O7fHHO/view?usp=drive_link) and run the below command to obtain the result in Table 2 in the paper.
 ```sh
 cd main
 python test_dexycb.py --gpu 0 --model_path '../pretrained_weights/snapshot_dexycb.pth.tar'
